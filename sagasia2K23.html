@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Sagacia</title>
+<style>
+*{
+scroll-behavior:smooth;
+padding:0;
+margin:0;
+}
+.wrapper{
+font-family:-apple-system , BlinkMacSystemFont , "Segoe UI" , Roboto , "Helvetica Neue" , Arial , sans-serif , "Apple Color Emoji" , "Segoe UI Emoji" , "Segoe UI Symbol";
+}
+
+.header{
+position:relative;
+padding:10px 0;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.logo{
+width:250px;
+height:100px;
+}
+
+.logo img{
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+.header ul{
+list-style:none;
+padding:5px;
+position:absolute;
+top:50%;
+right:50px;
+transform:translateY(-50%);
+}
+
+.header ul li{
+display:inline-block;
+vertical-align:top;
+padding:5px;
+}
+
+.header ul li a{
+color:#fe4c78;
+font-size:20px;
+font-weight:600;
+text-decoration:none;
+transition:.4s;
+padding:4px 10px;
+}
+h1{
+text-align:center;
+margin:10px 0 40px 0;
+width:100%;
+}
+#home{
+text-align:center;
+}
+.jayalogo{
+height:100px;
+width:100px;
+margin:40px auto 0 auto; 
+}
+.jayalogo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+.preview{
+width:400px;
+height:300px;
+display:inline-block;
+vertical-align:middle;
+}
+.preview img{
+width:100%;
+height:100%;
+}
+.content{
+display:inline-block;
+vertical-align:middle;
+}
+.content span{
+font-size:90px;
+font-weight:bold;
+color:#fe4c78;
+}
+.content p{
+color:#978888;
+font-weight:600;
+}
+.content a:hover, .map img:hover{
+transform:scale(1.1);
+transition:.5s;
+}
+.content a{
+transition:.3s;
+padding:14px 28px;
+border-radius:25px;
+color:#fff;
+font-weight:600;
+margin-top:40px;
+display:inline-block;
+text-decoration:none;
+background:linear-gradient(65deg, #ff527d 0, #ff85a3 100%);
+box-shadow:0 8px 16px rgba(255, 77, 121, 0.4);
+}
+.navs{
+text-align:center;
+}
+.navsPreview{
+width:50px;
+height:50px;
+display:inline-block;
+margin:20px;
+vertical-align:middle;
+}
+.header ul li a:hover{
+transition:.4s;
+background:#fff2f5;
+}
+.navsPreview img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+#events{
+margin-top:100px;
+padding:0 0 50px 0;
+text-align:center;
+display:flex;
+flex-wrap:wrap;
+justify-content:space-evenly;
+background:#fff2f5;
+}
+
+#events ul{
+width:200px;
+background:#fff;
+display:inline-block;
+vertical-align:top;
+list-style:none;
+padding:7px;
+border-radius:20px;
+transition:.3s;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#events ul:hover{
+transition:.3s;
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#events ul li{
+text-align:left;
+margin:10px;
+padding-left:30px;
+position:relative;
+font-size:18px;
+box-sizing:border-box;
+}
+#events ul li:first-child::before{
+background:unset;
+}
+#events ul li:first-child{
+color:#fe517c;
+font-size:20px;
+}
+#events ul li::before{
+content:'';
+position:absolute;
+top:50%;
+left:0;
+transform:translateY(-50%);
+width:20px;
+height:20px;
+background:url("arrow.png");
+background-size:cover;
+}
+#events p{
+margin-top:50px;
+color:#fe517c;
+width:95%;
+font-size:20px;
+font-weight:bold;
+}
+
+
+#contact{
+margin-top:80px;
+text-align:center;
+}
+.map{
+width:600px;
+height:400px;
+display:inline-block;
+vertical-align:top;
+}
+.map img{
+transition:.3s;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.map-content{
+text-align:left;
+width:80%;
+margin:auto;
+}
+
+.map-content span{
+font-weight:600;
+display:block;
+color:#766868;
+margin:10px 0;
+}
+.map-content span span{
+display:inline-block;
+color:#fe517c;
+}
+.footer{
+margin-top:40px;
+padding:20px 0;
+background:#310e16;
+}
+.footer p{
+text-align:center;
+color:#fff;
+width:97%;
+}
+
+@media (max-width:768px) {
+.content span{
+font-size:65px;
+}
+.logo{
+width:200px;
+height:85px;
+}
+.header ul{
+right:7px;
+}
+.map {
+  width: 415px;
+  height: 215px;
+  }
+}
+
+@media (max-width:450px) {
+.header{
+padding-bottom:70px;
+text-align:center;
+}
+.content span{
+font-size:50px;
+}
+.logo{
+margin:auto;
+}
+.header ul{
+top:80%;
+width:100%;
+}
+#events ul{
+margin-top:30px;
+}
+.map {
+  width: 280px;
+  height: 195px;
+  }
+  .map-content{
+  width:95%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<div class="header">
+	<div class="logo">
+		<img src="logo.png" alt="logo">
+	</div>
+	<ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#events">Events</a></li>
+		<li><a href="#contact">Contact US</a></li>
+	</ul>
+</div>
+<div class="jayalogo">
+	<img src="jayalogo.png" alt="jayalogo">
+</div>
+	<h1>Jaya Engineering College</h1>
+<div id="home">
+<div class="content">
+	<h2>Department Of Information Technology</h2>
+	<h3>Presents</h3>
+	<span>Sagacia 2K23</span>
+	<p>National Level Technical Symposium.</p>
+	<a href="#">Register Now</a>
+</div>
+</div>
+<!--EVENTS-->
+<div id="events">
+<h1>Events</h1>
+<ul>
+<li>Technical</li>
+<li>Paper Presentation</li>
+<li>Debugging</li>
+<li>Web Wars</li>
+<li>Quiz</li>
+</ul>
+
+<ul>
+<li>Non Technical</li>
+<li>Fandom Quiz</li>
+<li>E - Sport [Pubg]</li>
+<li>Active Popcorn</li>
+<li>Online</li>
+</ul>
+<p>Some Special Events Are Also Waiting For You.</p>
+</div>
+
+<div id="contact">
+<div class="map">
+	<a href="https://www.google.com/maps/place/Jaya+Engineering+College,+CTH+Road,+Prakash+Nagar,+Thiruninravur,+Tamil+Nadu+602024/data=!4m2!3m1!1s0x3a5289b72cf8bb8f:0xd5fed379d9b04ecc?utm_source=mstt_1&entry=gps&g_ep=CAESBzExLjExLjIYACD___________8BKgBCAklO" target="blank"><img src="map.png" alt="map"></a>
+</div>
+	<div class="map-content">
+		<span><span>Venue</span> : IT Block</span>
+		<span><span>Address</span> :  Some Special Events Are Also Waiting For You.Some Special Events Are Also Waiting For You.Some Special Events Are Also Waiting For You.
+		</span>
+		<span><span>contact</span> : 23456789023456789</span>
+		<span><span>Email</span> : diqwdmopdkqpk@fekwofk.dowkd</span>
+	</div>
+</div>
+<div class="footer">
+<div class="navs">
+<div class="navsPreview">
+<a href="#"><img src="insta.png" alt="insta"></a>
+</div>
+<div class="navsPreview">
+<a href="#"><img src="fb.png" alt="insta"></a>
+</div>
+</div>
+<p>Copyright © Department Of Information Technology</p>
+</div>
+</div>
+</body>
+</html>
